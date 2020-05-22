@@ -1,18 +1,17 @@
 <?php
 
-namespace Suprvise\SuprviseLaravel\Tests;
+namespace Suprvise\Laravel\Tests;
 
 use Orchestra\Testbench\TestCase;
-use Suprvise\SuprviseLaravel\SuprviseLaravelServiceProvider;
+use Suprvise\Laravel\Providers\SuprviseServiceProvider;
 
 class ExampleTest extends TestCase
 {
-
     protected function getPackageProviders($app)
     {
-        return [SuprviseLaravelServiceProvider::class];
+        return [SuprviseServiceProvider::class];
     }
-    
+
     /** @test */
     public function true_is_true()
     {

@@ -1,10 +1,11 @@
 <?php
 
-namespace Suprvise\SuprviseLaravel;
+namespace Suprvise\Laravel\Providers;
 
+use Suprvise\Laravel\Suprvise;
 use Illuminate\Support\ServiceProvider;
 
-class SuprviseLaravelServiceProvider extends ServiceProvider
+class SuprviseServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -21,7 +22,7 @@ class SuprviseLaravelServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('suprvise-laravel.php'),
+                __DIR__.'/../../config/config.php' => config_path('suprvise.php'),
             ], 'config');
 
             // Publishing the views.
@@ -50,11 +51,11 @@ class SuprviseLaravelServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'suprvise-laravel');
+        $this->mergeConfigFrom(__DIR__.'/../../config/config.php', 'suprvise');
 
         // Register the main class to use with the facade
-        $this->app->singleton('suprvise-laravel', function () {
-            return new SuprviseLaravel;
+        $this->app->singleton('suprvise', function () {
+            return new Suprvise;
         });
     }
 }

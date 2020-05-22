@@ -1,13 +1,10 @@
 <?php
 
-namespace Suprvise\SuprviseLaravel;
+namespace Suprvise\Laravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @see \Suprvise\SuprviseLaravel\Skeleton\SkeletonClass
- */
-class SuprviseLaravelFacade extends Facade
+class Suprvise extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +13,6 @@ class SuprviseLaravelFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'suprvise-laravel';
+        return 'suprvise';
     }
 }

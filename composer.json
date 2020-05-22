@@ -3,7 +3,9 @@
     "description": "Suprvise Laravel",
     "keywords": [
         "suprvise",
-        "suprvise-laravel"
+        "suprvise-laravel",
+        "monitoring",
+        "logging"
     ],
     "homepage": "https://github.com/suprvise/suprvise-laravel",
     "license": "GNU AGPLv",
@@ -17,26 +19,25 @@
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "^6.0"
+        "illuminate/support": "^7.12"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0",
-        "phpunit/phpunit": "^8.0"
+        "orchestra/testbench": "^5.2",
+        "phpunit/phpunit": "^9.1"
     },
     "autoload": {
         "psr-4": {
-            "Suprvise\\SuprviseLaravel\\": "src"
+            "Suprvise\\Laravel\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Suprvise\\SuprviseLaravel\\Tests\\": "tests"
+            "Suprvise\\Laravel\\Tests\\": "tests"
         }
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
@@ -44,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Suprvise\\SuprviseLaravel\\SuprviseLaravelServiceProvider"
+                "Suprvise\\Laravel\\Providers\\SuprviseServiceProvider"
             ],
             "aliases": {
-                "SuprviseLaravel": "Suprvise\\SuprviseLaravel\\SuprviseLaravelFacade"
+                "Suprvise": "Suprvise\\Laravel\\Facades\\Suprvise"
             }
         }
     }
