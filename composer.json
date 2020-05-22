@@ -1,0 +1,54 @@
+{
+    "name": "suprvise/suprvise-laravel",
+    "description": "Suprvise Laravel",
+    "keywords": [
+        "suprvise",
+        "suprvise-laravel"
+    ],
+    "homepage": "https://github.com/suprvise/suprvise-laravel",
+    "license": "GNU AGPLv",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Suprvise",
+            "email": "support@suprvise.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Suprvise\\SuprviseLaravel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Suprvise\\SuprviseLaravel\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Suprvise\\SuprviseLaravel\\SuprviseLaravelServiceProvider"
+            ],
+            "aliases": {
+                "SuprviseLaravel": "Suprvise\\SuprviseLaravel\\SuprviseLaravelFacade"
+            }
+        }
+    }
+}
