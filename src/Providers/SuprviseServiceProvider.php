@@ -2,7 +2,8 @@
 
 namespace Suprvise\Laravel\Providers;
 
-use Suprvise\Laravel\Suprvise;
+use Suprvise\Suprvise;
+use Suprvise\Logger;
 use Illuminate\Support\ServiceProvider;
 
 class SuprviseServiceProvider extends ServiceProvider
@@ -12,36 +13,10 @@ class SuprviseServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        /*
-         * Optional methods to load your package assets
-         */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'suprvise-laravel');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'suprvise-laravel');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->loadRoutesFrom(__DIR__.'/routes.php');
-
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../../config/config.php' => config_path('suprvise.php'),
             ], 'config');
-
-            // Publishing the views.
-            /*$this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/suprvise-laravel'),
-            ], 'views');*/
-
-            // Publishing assets.
-            /*$this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/suprvise-laravel'),
-            ], 'assets');*/
-
-            // Publishing the translation files.
-            /*$this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/suprvise-laravel'),
-            ], 'lang');*/
-
-            // Registering package commands.
-            // $this->commands([]);
         }
     }
 
@@ -54,8 +29,11 @@ class SuprviseServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../../config/config.php', 'suprvise');
 
         // Register the main class to use with the facade
-        $this->app->singleton('suprvise', function () {
-            return new Suprvise;
+        $this->app->singleton('suprvise-logger', function () {
+            Suprvise::key(config('suprvise.key'));
+            Suprvise::origin(config('suprvise.origin'));
+
+            return new Logger;
         });
     }
 }

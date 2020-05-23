@@ -4,7 +4,7 @@ namespace Suprvise\Laravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Suprvise extends Facade
+class Logger extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class Suprvise extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'suprvise';
+        return 'suprvise-logger';
     }
 }
