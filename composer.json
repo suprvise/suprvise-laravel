@@ -19,7 +19,8 @@
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "^7.12"
+        "illuminate/support": "^7.12",
+        "suprvise/suprvise-php": "^0.0.1"
     },
     "require-dev": {
         "orchestra/testbench": "^5.2",
