@@ -1,8 +1,6 @@
 <?php
 
-/*
- * You can place your custom package configuration in here.
- */
 return [
-
+    'key'    => '', // Suprvise key
+    'origin' => '', // Exact same url as the website you are monitoring within Suprvise
 ];
