@@ -30,8 +30,7 @@ class SuprviseServiceProvider extends ServiceProvider
 
         // Register the main class to use with the facade
         $this->app->singleton('suprvise-logger', function () {
-            Suprvise::key(config('suprvise.key'));
-            Suprvise::origin(config('suprvise.origin'));
+            Suprvise::dsn('logger', config('suprvise.logger'));
 
             return new Logger;
         });
