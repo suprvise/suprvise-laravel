@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92f15c4a3d732166f50bb64ecdc205da",
+    "content-hash": "7bf87a21e0a133f6a965b9fde38a1aea",
     "packages": [
         {
             "name": "brick/math",
@@ -4634,22 +4634,22 @@
         },
         {
             "name": "orchestra/testbench",
-            "version": "v5.11.0",
+            "version": "v5.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "ac9774ef59c5f9a2df257bb866fb24919d49c8fd"
+                "reference": "749ca157ac4f2ac62d67992863baf4b3f0772007"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/ac9774ef59c5f9a2df257bb866fb24919d49c8fd",
-                "reference": "ac9774ef59c5f9a2df257bb866fb24919d49c8fd",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/749ca157ac4f2ac62d67992863baf4b3f0772007",
+                "reference": "749ca157ac4f2ac62d67992863baf4b3f0772007",
                 "shasum": ""
             },
             "require": {
                 "laravel/framework": "^7.24",
-                "mockery/mockery": "^1.3.1",
-                "orchestra/testbench-core": "^5.11",
+                "mockery/mockery": "^1.3.2",
+                "orchestra/testbench-core": "^5.12.1",
                 "php": ">=7.2.5 || >=8.0",
                 "phpunit/phpunit": "^8.4 || ^9.0"
             },
@@ -4682,7 +4682,7 @@
             ],
             "support": {
                 "issues": "https://github.com/orchestral/testbench/issues",
-                "source": "https://github.com/orchestral/testbench/tree/v5.11.0"
+                "source": "https://github.com/orchestral/testbench/tree/v5.12.1"
             },
             "funding": [
                 {
@@ -4694,31 +4694,32 @@
                     "type": "liberapay"
                 }
             ],
-            "time": "2020-12-09T14:33:01+00:00"
+            "time": "2020-12-15T01:57:54+00:00"
         },
         {
             "name": "orchestra/testbench-core",
-            "version": "v5.11.0",
+            "version": "v5.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench-core.git",
-                "reference": "074d1f7481fb283959ef2c680a296f1b5d898fc3"
+                "reference": "445a0b20b9c6da9b6cb9a99bc5948bb364ff326f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/074d1f7481fb283959ef2c680a296f1b5d898fc3",
-                "reference": "074d1f7481fb283959ef2c680a296f1b5d898fc3",
+                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/445a0b20b9c6da9b6cb9a99bc5948bb364ff326f",
+                "reference": "445a0b20b9c6da9b6cb9a99bc5948bb364ff326f",
                 "shasum": ""
             },
             "require": {
                 "fakerphp/faker": "^1.9.1",
                 "php": ">=7.2.5 || >=8.0",
-                "symfony/yaml": "^4.3 || ^5.0"
+                "symfony/yaml": "^4.3 || ^5.0",
+                "vlucas/phpdotenv": "^4.1"
             },
             "require-dev": {
                 "laravel/framework": "^7.24",
                 "laravel/laravel": "7.x-dev",
-                "mockery/mockery": "^1.3.1",
+                "mockery/mockery": "^1.3.2",
                 "orchestra/canvas": "^5.0",
                 "phpunit/phpunit": "^8.4 || ^9.0"
             },
@@ -4778,7 +4779,7 @@
                     "type": "liberapay"
                 }
             ],
-            "time": "2020-12-09T14:15:54+00:00"
+            "time": "2020-12-15T01:39:18+00:00"
         },
         {
             "name": "phar-io/manifest",
